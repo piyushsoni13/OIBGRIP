@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <!-- Main container -->
+    <div id="container">
+      <!-- Form  -->
+      <form>
+        <!-- Date and Icons -->
+        <div id="header-sec">
+          <span id="date">date</span>
+          <span id="icons">
+            <i class="bx bx-signal-4"></i>
+            <i class="bx bx-wifi-2"></i>
+            <i class="bx bxs-battery"></i>
+          </span>
+        </div>
+
+        <!-- Input Section -->
+        <h3>Enter Temperature</h3>
+        <div id="input" class="input-sec">
+          <label>Degree</label>
+          <div>
+            <input
+              type="number"
+              id="degree-input"
+              class="form-control outline-secondary"
+              aria-label="Text input with dropdown button"
+              required
+            />
+            <select class="form-select" id="input-group" required>
+              <option value="C" id="C">&#176;C</option>
+              <option value="F" id="F">&#176;F</option>
+              <option value="K" id="K">K</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Conversion Unit selection -->
+        <div id="conversion-unit" class="input-sec">
+          <label>Convert In</label>
+          <select class="form-select" id="convert-group" required>
+            <option value="select">Select an option</option>
+            <option value="celcius" id="celcius">Celcius (&#176;C)</option>
+            <option value="fahrenheit" id="fahrenheit">
+              Fahreneit (&#176;F)
+            </option>
+            <option value="kelvin" id="kelvin">Kelvin (K)</option>
+          </select>
+        </div>
+        <div id="btn">
+          <button type="button" id="convert-btn">Convert &rightarrow;</button>
+        </div>
+      </form>
+
+      <!-- Final converted value -->
+      <div id="result">
+        <div><h1>Result :</h1></div>
+        <div class="">
+          <span id="answerValue"></span>
+          <span id="answerUnit"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script.js -->
+    <script src="script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
